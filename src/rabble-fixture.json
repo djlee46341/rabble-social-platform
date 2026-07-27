@@ -1,0 +1,158 @@
+[
+    {
+        "model": "rabble.user",
+        "pk": 1,
+        "fields": {
+            "username": "sam",
+            "password": "pbkdf2_sha256$600000$fhvtyRfvQsccWfOFCCTnEw$/Vete8locKdwS+3cijWxFXddE+jtmV2DwxkRJd4L4e4=",
+            "bio": "",
+            "interests": "",
+            "profile_picture": null
+        }
+    },
+    {
+        "model": "rabble.user",
+        "pk": 2,
+        "fields": {
+            "username": "alex",
+            "password": "pbkdf2_sha256$600000$fhvtyRfvQsccWfOFCCTnEw$/Vete8locKdwS+3cijWxFXddE+jtmV2DwxkRJd4L4e4=",
+            "bio": "",
+            "interests": "",
+            "profile_picture": null
+        }
+    },
+    {
+        "model": "rabble.user",
+        "pk": 3,
+        "fields": {
+            "username": "chris",
+            "password": "pbkdf2_sha256$600000$fhvtyRfvQsccWfOFCCTnEw$/Vete8locKdwS+3cijWxFXddE+jtmV2DwxkRJd4L4e4=",
+            "bio": "",
+            "interests": "",
+            "profile_picture": null
+        }
+    },
+    {
+        "model": "rabble.user",
+        "pk": 4,
+        "fields": {
+            "username": "morgan",
+            "password": "pbkdf2_sha256$600000$fhvtyRfvQsccWfOFCCTnEw$/Vete8locKdwS+3cijWxFXddE+jtmV2DwxkRJd4L4e4=",
+            "bio": "",
+            "interests": "",
+            "profile_picture": null
+        }
+    },
+    {
+        "model": "rabble.user",
+        "pk": 5,
+        "fields": {
+            "username": "drew",
+            "password": "pbkdf2_sha256$600000$fhvtyRfvQsccWfOFCCTnEw$/Vete8locKdwS+3cijWxFXddE+jtmV2DwxkRJd4L4e4=",
+            "bio": "",
+            "interests": "",
+            "profile_picture": null
+        }
+    },
+    {
+        "model": "rabble.communities",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "community_name": "default"
+        }
+    },
+    {
+        "model": "rabble.subrabbles",
+        "pk": 1,
+        "fields": {
+            "community": 1,
+            "subrabble_name": "cs-courses",
+            "identifier": "cs-courses",
+            "description": "Discussion about CS courses",
+            "is_public": true
+        }
+    },
+    {
+        "model": "rabble.subrabbles",
+        "pk": 2,
+        "fields": {
+            "community": 1,
+            "subrabble_name": "python",
+            "identifier": "python",
+            "description": "All about Python programming",
+            "is_public": true
+        }
+    },
+    {
+        "model": "rabble.subrabbles",
+        "pk": 3,
+        "fields": {
+            "community": 1,
+            "subrabble_name": "web-dev",
+            "identifier": "web-dev",
+            "description": "Web development discussions",
+            "is_public": true
+        }
+    },
+    {
+        "model": "rabble.posts",
+        "pk": 1,
+        "fields": {
+            "user": 2,
+            "subrabble": 1,
+            "title": "Best CS courses?",
+            "body": "What are the best CS courses to take?",
+            "num_comments": 3
+        }
+    },
+    {
+        "model": "rabble.posts",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "subrabble": 1,
+            "title": "Discrete Math vs Honors Discrete Math",
+            "body": "Which one should I take?",
+            "num_comments": 0
+        }
+    },
+    {
+        "model": "rabble.posts",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "subrabble": 1,
+            "title": "Study tips for tests",
+            "body": "What is the best way to study for cs exams?",
+            "num_comments": 0
+        }
+    },
+    {
+        "model": "rabble.comments",
+        "pk": 1,
+        "fields": {
+            "user": 3,
+            "post": 1,
+            "body": "I recommend regular Discrete Math"
+        }
+    },
+    {
+        "model": "rabble.comments",
+        "pk": 2,
+        "fields": {
+            "user": 4,
+            "post": 1,
+            "body": "Honors is more challenging but worth it"
+        }
+    },
+    {
+        "model": "rabble.comments",
+        "pk": 3,
+        "fields": {
+            "user": 5,
+            "post": 1,
+            "body": "I took Honors and it was great!"
+        }
+    }
+]

@@ -1,0 +1,30 @@
+{% extends "rabble/base.html" %}
+
+{% block content %}
+<div class="mx-auto" style="max-width: 750px;">
+    <div class="mb-4 p-4 bg-white shadow-sm rounded">
+        <h2><strong>!{{ subrabble.subrabble_name }}</strong> — {{ subrabble.description }}</h2>
+        <div class="text-end">
+            <a class="btn btn-warning btn-sm" href="{% url 'post-create' subrabble.identifier %}">+ New Post</a>
+        </div>
+    </div>
+
+    {% for post in posts %}
+        <div class="mb-3 p-3 bg-white border rounded shadow-sm">
+            <h5 class="mb-1 text-primary">
+                <a href="{% url 'post-detail' subrabble.identifier post.pk %}">{{ post.title }}</a>
+            </h5>
+            <p class="mb-2 text-muted">{{ post.body|truncatewords:25 }}</p>
+            <div class="d-flex justify-content-between small text-muted">
+                <div>By {{ post.user.username }}</div>
+                <div>
+                    👍 {{ post.num_likes }} &nbsp;
+                    💬 {{ post.num_comments }}
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p>No posts yet in this SubRabble.</p>
+    {% endfor %}
+</div>
+{% endblock content %}

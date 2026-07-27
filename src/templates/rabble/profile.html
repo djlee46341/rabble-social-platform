@@ -1,0 +1,17 @@
+{% extends "rabble/base.html" %}
+
+{% block content %}
+<p>
+   This is the profile page.
+</p>
+<p>
+    {% if user.is_authenticated %}
+</br>
+       Username: {{ user.username }}
+</br>
+       Email Address: {{user.email}}
+   {% else %}
+       Hello Guest! Please Login In!
+   {% endif %}
+</p>
+{% endblock content %}
