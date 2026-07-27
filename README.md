@@ -1,5 +1,7 @@
 # Rabble
 
+*Built for CMSC 22000 (Introduction to Software Engineering), University of Chicago.*
+
 A Reddit/Twitter-style social platform built with Django and Django REST Framework. Users can follow each other, join communities, post and comment within topic-based sub-communities ("subrabbles"), and message each other directly.
 
 ## Features
